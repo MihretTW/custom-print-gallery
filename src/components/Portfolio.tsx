@@ -164,10 +164,10 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition: {
-  duration: 0.5,
-  ease: [0.25, 0.1, 0.25, 1] as const,
-}
+         transition={{
+  duration: 0.3,
+  ease: [0.22, 1, 0.36, 1] as const,
+}}
          
           className="mb-10 flex flex-wrap justify-center gap-2"
         >
@@ -258,7 +258,10 @@ export default function Portfolio() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] } as const,}
+                transition={{
+  duration: 0.3,
+  ease: [0.22, 1, 0.36, 1] as const,
+}}
                 onClick={(e) => e.stopPropagation()}
                 className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl"
               >
