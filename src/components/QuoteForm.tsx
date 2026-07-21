@@ -253,12 +253,12 @@ export default function QuoteForm() {
                       >
                         {SERVICES.map((s) => {
                           const Icon = iconMap[s.icon] || Image;
-                          const isSelected = form.service === s.name;
+                          const isSelected = form.service === s.title;
                           return (
                             <motion.button
                               key={s.id}
                               variants={cardVariants}
-                              onClick={() => update("service", s.name)}
+                              onClick={() => update("service", s.title)}
                               className={`group relative overflow-hidden rounded-xl border-2 transition-all duration-300 text-left ${
                                 isSelected
                                   ? "border-cyan-500 bg-cyan-50/50 shadow-md shadow-cyan-500/10"
