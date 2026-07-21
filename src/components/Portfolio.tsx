@@ -141,7 +141,10 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition: {
+  duration: 0.5,
+  ease: [0.25, 0.1, 0.25, 1] as const,
+}
           className="mb-16 text-center"
         >
           <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-stone-400">
@@ -161,7 +164,11 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition: {
+  duration: 0.5,
+  ease: [0.25, 0.1, 0.25, 1] as const,
+}
+         
           className="mb-10 flex flex-wrap justify-center gap-2"
         >
           {categories.map((cat) => (
@@ -250,7 +257,8 @@ export default function Portfolio() {
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] } as const,}
                 onClick={(e) => e.stopPropagation()}
                 className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl"
               >
